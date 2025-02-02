@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python Homework</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Python Homework</h1>
+        <p>Complete the following exercises to practice what you've learned!</p>
+
+        <h2>Exercise 1: Variables</h2>
+        <p>Create a variable named <code>name</code> and assign it your name. Then, print the variable.</p>
+        <textarea id="exercise1" rows="4" cols="50" placeholder="Write your code here..."></textarea>
+        <button onclick="checkExercise(1)">Check Answer</button>
+        <p id="result1"></p>
+
+        <h2>Exercise 2: Loops</h2>
+        <p>Write a loop that prints numbers from 1 to 5.</p>
+        <textarea id="exercise2" rows="4" cols="50" placeholder="Write your code here..."></textarea>
+        <button onclick="checkExercise(2)">Check Answer</button>
+        <p id="result2"></p>
+
+        <a href="/lesson" class="btn">Back to Lesson</a>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>

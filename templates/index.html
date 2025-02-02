@@ -1,0 +1,39 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head>     
+    <meta charset="UTF-8">     
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">     
+    <title>Python Tutor for Kids</title>     
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}"> 
+</head> 
+<body>     
+    <div class="container">         
+        <h1>Welcome to Python Tutor for Kids!</h1>                  
+        <!-- Description -->         
+        <div class="description">             
+            <p>Python Tutor for Kids is an interactive, AI-powered learning platform designed to make coding fun and accessible for children. Our goal is to introduce young learners to the basics of Python programming in an engaging and supportive environment. With the help of a friendly AI tutor, kids can explore fundamental concepts like variables, loops, and functions through interactive lessons and hands-on exercises.</p>             
+            <h3>Unique Features</h2>
+            <ul>
+                <li><strong>AI-Powered Tutor:</strong> A smart, friendly AI tutor guides children through lessons and answers their questions in real-time.</li>
+                <li><strong>Interactive Homework:</strong> After each lesson, kids can complete fun, interactive assignments to reinforce their learning.</li>
+                <li><strong>Customizable Characters:</strong> Children can personalize their AI tutor by choosing from a variety of fun characters, such as robots, wizards, or dinosaurs.</li>
+                <li><strong>Child-Friendly Design:</strong> The interface is colorful, intuitive, and designed specifically for kids, making learning enjoyable and stress-free.</li>
+            </ul>
+            
+            <h3>Design Approach</h2>
+            <p>We’ve designed this application with kids in mind, ensuring that every element—from the playful visuals to the step-by-step lessons—is tailored to their needs. Our focus is on creating a safe, engaging, and educational experience that sparks curiosity and builds confidence in young coders. Whether your child is a beginner or has some coding experience, Python Tutor for Kids is the perfect place to start their programming journey!</p>
+        </div>          
+
+        <!-- Start Learning Button -->         
+        <a href="/lesson" class="btn">Start Learning</a>          
+
+        <!-- API Key Configuration -->         
+        <div class="api-key-config">             
+            <input type="text" id="api-key" placeholder="Enter your OpenAI API key">             
+            <button onclick="configureApiKey()">Save API Key</button>         
+        </div>     
+    </div>      
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script> 
+</body> 
+</html>
