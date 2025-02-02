@@ -37,4 +37,4 @@ def configure():
     return jsonify({"status": "success", "message": "API key updated successfully."})
 
 if __name__ == '__main__':
-    app.run(debug=False)
+    app.run(debug=True)
