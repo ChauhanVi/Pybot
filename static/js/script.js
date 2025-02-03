@@ -1,28 +1,16 @@
-function configureApiKey() {
-    const apiKey = document.getElementById('api-key').value;
-    fetch('/configure', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ api_key: apiKey }),
-    })
-    .then(response => response.json())
-    .then(data => {
-        alert(data.message);
-    });
-}
 function checkExercise(exerciseNumber) {
-    const code = document.getElementById(`exercise${exerciseNumber}`).value;
+    const code = document.getElementById(`exercise${exerciseNumber}`).value.trim();
     let resultElement = document.getElementById(`result${exerciseNumber}`);
-    let correctAnswer;
+    let correctAnswer = false;
 
     switch (exerciseNumber) {
         case 1:
-            correctAnswer = /name\s*=\s*.+;\s*print\s*\(\s*name\s*\)/i.test(code);
+            // Check for variable assignment and print statement
+            correctAnswer = /^name\s*=\s*["'][a-zA-Z\s]+["']\s*\n\s*print\s*\(\s*name\s*\)$/m.test(code);
             break;
         case 2:
-            correctAnswer = /for\s*\(\s*.*\s+in\s+range\s*\(\s*1\s*,\s*6\s*\)\s*\):\s*print\s*\(.*\)/i.test(code);
+            // Check for a valid for loop printing numbers from 1 to 5
+            correctAnswer = /^for\s+[a-zA-Z_]\w*\s+in\s+range\s*\(\s*1\s*,\s*6\s*\):\s*\n\s+print\s*\(.*\)$/m.test(code);
             break;
         default:
             correctAnswer = false;
